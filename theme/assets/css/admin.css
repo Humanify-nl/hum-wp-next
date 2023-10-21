@@ -1,0 +1,38 @@
+.column-img {
+  width: 100px;
+}
+
+.column-img img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  height: 80px;
+  width: 100px;
+}
+
+.column-date {
+  width: 13%;
+}
+
+.column-author {
+  width: 10%;
+}
+
+.column-title {
+  min-width: 20%;
+}
+
+.column-page-templates {
+  width: 10%;
+}
+
+@media screen and (max-width: 782px) {
+  .column-img {
+		width: 20px;
+  }
+
+  .column-img img {
+    height: 18px;
+    width: 24px;
+  }
+}
