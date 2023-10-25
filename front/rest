@@ -1,0 +1,338 @@
+[
+  {
+    "id": 15,
+    "date": "2023-10-21T14:14:12",
+    "date_gmt": "2023-10-21T14:14:12",
+    "guid": {
+      "rendered": "http:\/\/localhost:3000\/?p=15"
+    },
+    "modified": "2023-10-21T14:15:06",
+    "modified_gmt": "2023-10-21T14:15:06",
+    "slug": "nieuwe-testpost",
+    "status": "publish",
+    "type": "post",
+    "link": "http:\/\/localhost:3000\/nieuwe-testpost\/",
+    "title": {
+      "rendered": "Nieuwe testpost"
+    },
+    "content": {
+      "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum urna vitae augue dapibus ornare. Sed eu nisl eu lectus pulvinar maximus ut nec lectus. Integer suscipit dapibus porttitor. Integer cursus, mauris id aliquet cursus, lorem arcu feugiat metus, non euismod ipsum nulla ut arcu. Morbi mattis turpis libero, non commodo eros tempor ultricies. Sed quam ex, consectetur et dui et, porta aliquam elit. Fusce commodo, eros vel aliquet eleifend, purus sem blandit purus, a pretium quam enim lobortis augue. Curabitur eu massa ac ligula placerat sagittis iaculis et metus. Cras vulputate sagittis mi. Nunc quis metus urna.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum urna vitae augue dapibus ornare. Sed eu nisl eu lectus pulvinar maximus ut nec lectus. Integer suscipit dapibus porttitor. Integer cursus, mauris id aliquet cursus, lorem arcu feugiat metus, non euismod ipsum nulla ut arcu. Morbi mattis turpis libero, non commodo eros tempor ultricies. Sed [&hellip;]<\/p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 12,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "footnotes": ""
+    },
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "acf": [],
+    "featured_img_url": "http:\/\/hum-wp-next.local\/wp-content\/uploads\/2023\/10\/DeathValleySunrise_1600.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/15"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/types\/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/comments?post=15"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/15\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/15\/revisions\/16"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media\/12"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media?parent=15"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/categories?post=15"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/tags?post=15"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "date": "2023-10-21T09:10:27",
+    "date_gmt": "2023-10-21T09:10:27",
+    "guid": {
+      "rendered": "http:\/\/hum-wp-next.local\/?p=7"
+    },
+    "modified": "2023-10-21T11:12:24",
+    "modified_gmt": "2023-10-21T11:12:24",
+    "slug": "test-post",
+    "status": "publish",
+    "type": "post",
+    "link": "http:\/\/localhost:3000\/test-post\/",
+    "title": {
+      "rendered": "Test post"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 12,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "footnotes": ""
+    },
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "acf": [],
+    "featured_img_url": "http:\/\/hum-wp-next.local\/wp-content\/uploads\/2023\/10\/DeathValleySunrise_1600.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/7"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/types\/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/comments?post=7"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/7\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 8,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/7\/revisions\/8"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media\/12"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media?parent=7"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/categories?post=7"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/tags?post=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "date": "2023-10-21T07:19:03",
+    "date_gmt": "2023-10-21T07:19:03",
+    "guid": {
+      "rendered": "http:\/\/hum-wp-next.local\/?p=1"
+    },
+    "modified": "2023-10-21T11:12:14",
+    "modified_gmt": "2023-10-21T11:12:14",
+    "slug": "hello-world",
+    "status": "publish",
+    "type": "post",
+    "link": "http:\/\/localhost:3000\/hello-world\/",
+    "title": {
+      "rendered": "Hello world!"
+    },
+    "content": {
+      "rendered": "\r\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!<\/p>\r\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!<\/p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 13,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "footnotes": ""
+    },
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "acf": [],
+    "featured_img_url": "http:\/\/hum-wp-next.local\/wp-content\/uploads\/2023\/10\/ColoradoRedCloud_1600.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/1"
+        }
+      ],
+      "collection": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/types\/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/comments?post=1"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/1\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 14,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/posts\/1\/revisions\/14"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media\/13"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/media?parent=1"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/categories?post=1"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "http:\/\/hum-wp-next.local\/wp-json\/wp\/v2\/tags?post=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

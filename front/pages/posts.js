@@ -20,13 +20,10 @@ export default function Home({ posts }) {
         <h1 className="text-6xl">Tech Blog</h1>
       </Header>
       <Section>
-        <div className="flex flex-wrap md:flex-nowrap justify-between gap-4">
-          <div className="flex flex-col gap-y-4 md:basis-2/4">
+        <div className="flex">
+          <div className="flex flex-col gap-y-4">
             <h2 className="text-4xl">Blog posts</h2>
             {LatestPosts}
-          </div>
-          <div className="md:basis-2/4">
-            <h2 className="text-4xl">Events</h2>
           </div>
         </div>
       </Section>
