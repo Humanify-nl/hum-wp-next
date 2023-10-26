@@ -32,8 +32,7 @@ include get_template_directory() . '/inc/excerpt.php';
 
 // REST
 include get_template_directory() . '/api/wp_app_password.php';
-include get_template_directory() . '/api/featured_image_url.php';
-//include get_template_directory() . '/api/pages.php';
+include get_template_directory() . '/api/rest_endpoints.php';
 
 
 add_action( 'rest_api_init', function() {

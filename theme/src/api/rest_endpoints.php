@@ -1,24 +1,24 @@
 <?php
-add_action('rest_api_init', 'register_rest_endpoints' );
 function register_rest_endpoints(){
   register_rest_field( array('post', 'page'),
-    'featured_img_url',
-    array(
-      'get_callback'    => 'get_rest_featured_image',
-      'update_callback' => null,
-      'schema'          => null,
+  'featured_img_url',
+  array(
+    'get_callback'    => 'get_rest_featured_image',
+    'update_callback' => null,
+    'schema'          => null,
     )
   );
-
+  
   register_rest_field( array('page'),
   'next_path',
-    array(
-      'get_callback'    => 'get_rest_real_url',
-      'update_callback' => null,
-      'schema'          => null,
+  array(
+    'get_callback'    => 'get_rest_real_url',
+    'update_callback' => null,
+    'schema'          => null,
     )
   );
 }
+add_action('rest_api_init', 'register_rest_endpoints' );
 
 function get_rest_featured_image( $object, $field_name, $request ) {
   if( $object['featured_media'] ){

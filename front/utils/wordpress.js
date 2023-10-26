@@ -27,13 +27,6 @@ export async function getPage(slug) {
   return page;
 }
 
-export async function getPageByUri(uri) {
-  const pages = await getPages();
-  const page = pages.filter((page) => page.next_path == uri);
-  //const page = pageArray.length > 0 ? pageArray[0] : null;
-  return page;
-}
-
 export async function getEvents() {
   const eventsRes = await fetch(BASE_URL + '/events?_embed');
   const events = await eventsRes.json();
@@ -92,28 +85,3 @@ export async function getUsers() {
   const getUsers = await getUsersRes.json();
   return getUsers;
 }
-
-/*
-export async function getPages() {
-  const pageRes = await fetch(BASE_URL + '/pages?');
-  const pages = await pageRes.json();
-  return pages;
-}
-*/
-/*
-export async function getPageBySlug(uri) {
-
-  let uri = 
-
-  let query = '_fields=link,id';
-
-  const pageDataRes = await fetch(BASE_URL + '/pages?' + query);
-  const pageData = await pageDataRes.json();
-  const page = pageData;
-
-  return {
-    page,
-  };
-
-}
-*/
