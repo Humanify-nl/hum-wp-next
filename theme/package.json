@@ -1,0 +1,41 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WP headless theme for next.js",
+  "author": "Robbert van Hooij",
+  "license": "GPL-2.0-only",
+  "scripts": {
+    "build": "webpack --config webpack.dev.js",
+    "dev": "webpack --config webpack.dev.js --watch",
+    "prod": "webpack --config webpack.prod.js"
+  },
+  "keywords": [
+    "wordpress",
+    "classic",
+    "next.js"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@wordpress/browserslist-config": "^5.27.0",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "browserslist": "^4.22.1",
+    "cli-progress-webpack-plugin": "^1.0.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.31",
+    "postcss-custom-properties": "^13.3.2",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.2.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-remove-empty-scripts": "^1.0.4"
+  }
+}

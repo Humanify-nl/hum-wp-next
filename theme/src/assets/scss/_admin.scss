@@ -1,13 +1,13 @@
 .column-img {
   width: 100px;
-}
 
-.column-img img {
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-  height: 80px;
-  width: 100px;
+  img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    height: 80px;
+    width: 100px;
+  }
 }
 
 .column-date {

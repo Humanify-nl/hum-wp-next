@@ -1,0 +1,6 @@
+# dependencies
+/node_modules
+# prod build
+/hum-wp-next
+# wp config example
+wp-config.php
