@@ -3,9 +3,9 @@ add_action( 'after_setup_theme', function() {
 
   load_theme_textdomain( 'hum' );
 
-  add_editor_style( array(
+  add_editor_style( [
     'assets/css/editor.css',
-  ) );
+  ]);
 
   add_theme_support( 'post-thumbnails' );
   
@@ -15,9 +15,9 @@ add_action( 'after_setup_theme', function() {
 
   // add menu
   register_nav_menus(
-    array(
+    [
       'main' => __('Main'),
-    )
+    ]
   );
 
 } );
