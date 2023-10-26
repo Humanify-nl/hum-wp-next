@@ -1,10 +1,10 @@
-import { getPosts } from '../utils/wordpress';
+import { getPosts, getMenu } from '../utils/wordpress';
 import Header from 'components/Header';
 import PostCard from 'components/PostCard';
 import Layout from 'components/Layout';
 import Section from 'components/Section';
 
-export default function Home({ posts }) {
+export default function Home({ posts, menu }) {
 
   const LatestPosts = posts.map((post) => {
     return <PostCard
@@ -13,9 +13,10 @@ export default function Home({ posts }) {
              key={post.id}
            />;
   });
+  
 
   return (
-    <Layout>
+    <Layout menu={menu}>
       <Header className="bg-slate">
         <h1 className="text-6xl">Tech Blog</h1>
       </Header>
@@ -36,10 +37,12 @@ export default function Home({ posts }) {
 
 export async function getStaticProps({ params }) {
   const posts = await getPosts();
+  const menu = await getMenu('main');
   
   return {
     props: {
       posts,
+      menu,
     },
     revalidate: 10, // In seconds
   };

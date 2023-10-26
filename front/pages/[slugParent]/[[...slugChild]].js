@@ -18,7 +18,6 @@ export async function getStaticProps({ params = {} }) {
   }
   
   const { page } = await getPageByUri(pageUri) || {};
-  {console.log(page)}
 
   if (!page) {
     return {
@@ -36,9 +35,14 @@ export async function getStaticProps({ params = {} }) {
 
 
 export async function getStaticPaths() {
+
   const paths = await getSlugs('pages');
+  
+  console.log( 'log:', paths)
+
   return {
-    paths: [],
+    paths,
     fallback: 'blocking', // Set to true to handle dynamic paths not defined at build time
   };
+
 }

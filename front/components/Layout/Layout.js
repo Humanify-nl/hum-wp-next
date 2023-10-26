@@ -4,7 +4,9 @@ import Footer from 'components/Footer';
 
 export const siteTitle = 'Next.js Sample Website';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, menu }) => {
+
+  
   return (
     <>
       <Head>
@@ -15,8 +17,8 @@ const Layout = ({ children }) => {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <Nav></Nav>
+      </Head>      
+      <Nav menu={menu}></Nav>
       <main className="bg-gray-100">
         {children}
         <Footer className="bg-slate-800 text-white">
@@ -26,5 +28,7 @@ const Layout = ({ children }) => {
     </>
   );
 }
+
+//
 
 export default Layout;

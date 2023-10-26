@@ -1,4 +1,5 @@
 const BASE_URL = process.env.WP_REST_URL;
+const MENU_URL = process.env.WP_REST_MENU_URL;
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + '/posts?acf_format=standard');
@@ -67,6 +68,12 @@ export async function getSlugs(type) {
     };
   });
   return elementsIds;
+}
+
+export async function getMenu(menuName) {
+  const menuRes = await fetch(MENU_URL + '/' + menuName );
+  const menu = await menuRes.json();
+  return menu;
 }
 
 
