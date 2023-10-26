@@ -4,7 +4,7 @@ const NavItem = ( {item} ) => {
 
   return (
     <li className="nav-item" key={item.ID}>            
-      <Link
+      <Link        
         href={item?.slug || ''}
         title={item.title}
         className="nav-item-link underline hover:no-underline"           
@@ -16,7 +16,7 @@ const NavItem = ( {item} ) => {
         <ul className="nav-submenu">
           {item.child_items?.map((childItem) => {
             return(
-              <NavItem key={childItem.id} item={childItem} />
+              <NavItem key={childItem.ID} item={childItem} />
             )
           })}
         </ul>

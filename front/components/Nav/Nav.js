@@ -1,12 +1,6 @@
 import NavItem from 'components/NavItem';
-      /*
 
-      */
 const Nav = ( {menu} ) => {
-
-  console.log(menu);
-
-
 
   return (
     <header className="navbar">
@@ -14,13 +8,13 @@ const Nav = ( {menu} ) => {
         <nav className="nav">
           <ul className="nav-container flex flex-nowrap gap-4">
             {menu.items.map((item) => {
-                return (
-                  <NavItem
-                    className="nav-item"
-                    key={item.ID}
-                    item={item}
-                  />
-                )
+              return (
+                <NavItem
+                  className="nav-item"
+                  key={item.ID}
+                  item={item}
+                />
+              )
               })}
           </ul>
         </nav>
