@@ -1,5 +1,5 @@
 import { getPosts } from '../utils/wordpress';
-import Header from 'components/header';
+import Header from 'components/Header';
 import PostCard from 'components/PostCard';
 import Layout from 'components/Layout';
 import Section from 'components/Section';
