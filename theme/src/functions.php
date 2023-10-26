@@ -13,6 +13,13 @@ add_action( 'after_setup_theme', function() {
   remove_theme_support( 'post-formats' );
   remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
+  // add menu
+  register_nav_menus(
+    array(
+      'main' => __('Main'),
+    )
+  );
+
 } );
 
 // disable editor
