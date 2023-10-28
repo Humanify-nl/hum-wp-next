@@ -1,10 +1,11 @@
-import { useRouter } from 'next/router';
-import { getSlugs, getPageByUri } from '../../utils/wordpress';
+import { getPages, getPageByUri } from '../../utils/wordpress';
 
-export default function Page( page ) {
-  const router = useRouter()
+export default function Page( {page} ) {
+
   return (
-    <p>Post: {router.query.slug}</p>
+    <>
+    <p>{page.title.rendered}</p>
+    </>
   );
 }
 
@@ -17,14 +18,17 @@ export async function getStaticProps({ params = {} }) {
     pageUri = `${pageUri}${slugChild.join('/')}/`;
   }
   
-  const { page } = await getPageByUri(pageUri) || {};
+  const pageData = await getPageByUri(pageUri);
 
-  if (!page) {
+  if (!pageData || !pageData[0] || !pageData[0].title || !pageData[0].title.rendered) {
     return {
-      props: {},
-      notFound: true,
+      props: {
+        page: { title: { rendered: '' } },
+      },
     };
   }
+
+  const page = pageData[0];
 
   return {
     props: {
@@ -36,10 +40,21 @@ export async function getStaticProps({ params = {} }) {
 
 export async function getStaticPaths() {
 
-  const paths = await getSlugs('pages');
-  
-  console.log( 'log:', paths)
+  const pages  = await getPages();
 
+  const paths = pages
+  .filter(({ next_path }) => typeof next_path === 'string' && next_path !== '/')
+  .map(({ next_path }) => {
+    const segments = next_path.split('/').filter((next_path) => next_path !== '');
+    
+    return {
+      params: {
+        slugParent: segments.shift(),
+        slugChild: segments,
+      },
+    };
+  });
+  
   return {
     paths,
     fallback: 'blocking', // Set to true to handle dynamic paths not defined at build time

@@ -6,7 +6,6 @@ export const siteTitle = 'Next.js Sample Website';
 
 const Layout = ({ children, menu }) => {
 
-  
   return (
     <>
       <Head>
@@ -28,7 +27,5 @@ const Layout = ({ children, menu }) => {
     </>
   );
 }
-
-//
 
 export default Layout;

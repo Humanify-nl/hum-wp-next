@@ -53,14 +53,14 @@ export async function getSlugs(type) {
       elements = await getPages();
       break;
   }
-  const elementsIds = elements.map((element) => {
+  const elementSlugs = elements.map((element) => {
     return {
       params: {
         slug: element.slug,
       },
     };
   });
-  return elementsIds;
+  return elementSlugs;
 }
 
 export async function getMenu(menuName) {
@@ -84,4 +84,11 @@ export async function getUsers() {
   });
   const getUsers = await getUsersRes.json();
   return getUsers;
+}
+
+export async function getPageByUri(uri) {
+  const pages = await getPages();
+  const page = pages.filter((page) => page.next_path == uri);
+  //const page = pageArray.length > 0 ? pageArray[0] : null;
+  return page;
 }

@@ -5,12 +5,12 @@ import Section from 'components/Section';
 import Link from 'next/link';
 import FlexibleContent from 'components/FlexibleContent';
 
-import { getPost, getSlugs } from '../../utils/wordpress';
+import { getPost, getSlugs, getMenu } from '../../utils/wordpress';
 
-export default function PostPage({ post }) {
+export default function PostPage({ post, menu }) {
 
   return (
-    <Layout>
+    <Layout menu={menu}>
       <Header>
         <Img
           src={ post.featured_img_url }
@@ -62,10 +62,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = await getPost(params.slug);
+  const menu = await getMenu('main');
 
   return {
     props: {
       post,
+      menu,
     },
     revalidate: 10, // In seconds
   };
