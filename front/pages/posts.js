@@ -4,7 +4,7 @@ import PostCard from 'components/PostCard';
 import Layout from 'components/Layout';
 import Section from 'components/Section';
 
-export default function Home({ posts }) {
+function PostsPage({ posts }) {
 
   const LatestPosts = posts.map((post) => {
     return <PostCard
@@ -41,3 +41,5 @@ export async function getStaticProps({ params }) {
     revalidate: 10, // In seconds
   };
 }
+
+export default PostsPage;

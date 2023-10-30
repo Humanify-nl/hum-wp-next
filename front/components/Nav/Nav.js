@@ -2,8 +2,6 @@ import NavItem from 'components/NavItem';
 
 const Nav = ( {menu} ) => {
 
-  {console.log('new log')}
-  
   menu.items.forEach((item) => {
    
     if (item.child_items) {

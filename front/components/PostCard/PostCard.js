@@ -1,6 +1,6 @@
 import ClassName from 'models/classname';
 import Link from 'next/link';
-import Img from 'components/Img';
+import PostImage from 'components/PostImage';
 import { getDate } from '../../utils/utils';
 
 const PostCard = ( {className, post} ) => {
@@ -11,7 +11,7 @@ const PostCard = ( {className, post} ) => {
   return (
     <Link href={`/posts/${post.slug}`}>     
       <article className={PostCardClassName}>
-        <Img
+        <PostImage
           src={ post.featured_img_url }
           alt="Picture"
           className="basis-3/12"
