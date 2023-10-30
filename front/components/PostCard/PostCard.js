@@ -9,10 +9,10 @@ const PostCard = ( {className, post} ) => {
   PostCardClassName.addIf(className, className).toString();
 
   return (
-    <Link href={`/posts/${post.slug}`}>     
+    <Link href={`/posts/${post.slug}`}>
       <article className={PostCardClassName}>
         <PostImage
-          src={ post.featured_img_url }
+          src={ post?.featured_img_url }
           alt="Picture"
           className="basis-3/12"
           classNameImg="aspect-4/3 rounded"

@@ -1,10 +1,10 @@
-import { getPage, getPost, getSlugs, getMenu, getMedia } from '../utils/wordpress';
+import { getPage, getPost, getPosts, getSlugs, getMenu } from '../utils/wordpress';
 import Header from 'components/Header';
 import Layout from 'components/Layout';
 import PostImage from 'components/PostImage';
 import FlexibleContent from 'components/FlexibleContent';
 
-export default function Page( {page, menu} ) {
+export default function Page( {page, menu, posts} ) {
 
   let post = page;
 
@@ -21,19 +21,19 @@ export default function Page( {page, menu} ) {
         )}
         <h1 className="text-h1">{post?.title.rendered}</h1>
       </Header>
-      <FlexibleContent post={post}/>
+      <FlexibleContent post={post} posts={posts}/>
     </Layout>
   );
 }
 
 export async function getStaticProps({ params = {} }) {
   const { slug } = params;
-  const media = await getMedia(12);
   const menu = await getMenu('main');
 
   const lastSlugOnly = slug[slug.length - 1];
   const pageData = await getPage(lastSlugOnly);
   const postData = await getPost(lastSlugOnly);
+  const posts = await getPosts();
 
   const page = pageData ?? postData;
 
@@ -41,7 +41,7 @@ export async function getStaticProps({ params = {} }) {
     props: {
       page,
       menu,
-      media,
+      posts
     },
   };
 }

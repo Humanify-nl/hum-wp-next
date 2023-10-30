@@ -60,6 +60,13 @@ export async function getPageByUri(uri) {
   return page;
 }
 
+export async function getPostById(id) {
+  const posts = await getPosts();
+  const postArray = posts.filter((post) => post.id == id);
+  const post = postArray.length > 0 ? postArray[0] : null;
+  return post;
+}
+
 
 // WP request with app password
 export async function getUsers() {
