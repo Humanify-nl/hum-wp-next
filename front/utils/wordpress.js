@@ -27,27 +27,11 @@ export async function getPage(slug) {
   return page;
 }
 
-export async function getEvents() {
-  const eventsRes = await fetch(BASE_URL + '/events?_embed');
-  const events = await eventsRes.json();
-  return events;
-}
-
-export async function getEvent(slug) {
-  const events = await getEvents();
-  const eventArray = events.filter((event) => event.slug == slug);
-  const event = eventArray.length > 0 ? eventArray[0] : null;
-  return event;
-}
-
 export async function getSlugs(type) {
   let elements = [];
   switch (type) {
     case 'posts':
       elements = await getPosts();
-      break;
-    case 'events':
-      elements = await getEvents();
       break;
     case 'pages':
       elements = await getPages();
@@ -56,7 +40,7 @@ export async function getSlugs(type) {
   const elementSlugs = elements.map((element) => {
     return {
       params: {
-        slug: element.slug,
+        slug: element.next_path_array,
       },
     };
   });
@@ -67,6 +51,13 @@ export async function getMenu(menuName) {
   const menuRes = await fetch(MENU_URL + '/' + menuName );
   const menu = await menuRes.json();
   return menu;
+}
+
+export async function getPageByUri(uri) {
+  const pages = await getPages();
+  const page = pages.filter((page) => page.next_path == uri);
+  //const page = pageArray.length > 0 ? pageArray[0] : null;
+  return page;
 }
 
 
@@ -86,9 +77,37 @@ export async function getUsers() {
   return getUsers;
 }
 
-export async function getPageByUri(uri) {
-  const pages = await getPages();
-  const page = pages.filter((page) => page.next_path == uri);
-  //const page = pageArray.length > 0 ? pageArray[0] : null;
-  return page;
+// WP request with app password
+export async function getMedia(id) {
+  const user = process.env.WP_APP_USER;
+  const password = process.env.WP_APP_PASSWORD;
+  const getMediaRes = await fetch(BASE_URL + '/media', {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Authorization": "Basic " + btoa(user + ':' + password),
+      "Content-Type": "application/json",
+    },
+  });
+  const mediaRes = await getMediaRes.json();
+  const media = mediaRes.filter((media) => media.id == id);
+  return media;
+}
+
+// WP request with app password
+export async function getMediaSizes(id) {
+  const user = process.env.WP_APP_USER;
+  const password = process.env.WP_APP_PASSWORD;
+  const getMediaRes = await fetch(BASE_URL + '/media', {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Authorization": "Basic " + btoa(user + ':' + password),
+      "Content-Type": "application/json",
+    },
+  });
+  const mediaRes = await getMediaRes.json();
+  const mediaArray = mediaRes.filter((media) => media.id == id);
+  const media = mediaArray.length > 0 ? mediaArray[0] : null;
+  return media;
 }
