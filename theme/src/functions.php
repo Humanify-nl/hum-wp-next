@@ -29,6 +29,7 @@ include get_template_directory() . '/inc/scripts.php';
 include get_template_directory() . '/inc/admin.php';
 include get_template_directory() . '/inc/images.php';
 include get_template_directory() . '/inc/excerpt.php';
+include get_template_directory() . '/inc/plugin-support/acf.php';
 
 // REST
 include get_template_directory() . '/api/wp_app_password.php';
